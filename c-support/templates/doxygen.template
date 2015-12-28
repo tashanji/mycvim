@@ -25,26 +25,22 @@
 //  <CURSOR>
 //-----------------------------------------------------------------------------
 == Comments.function == map:cfu, shortcut:f  ==
-/*!
+/**
  *  |DOX_CMD|brief  |DESCRIPTION|<CURSOR>
  *  
  *  |DOX_CMD|param  <+NAME+> <+DESCRIPTION+>
  *  |DOX_CMD|return <+DESCRIPTION+>
- *  <+DETAILED+>
  */
 == Comments.method == map:cme, shortcut:m  ==
-/*!
+/**
  *  |DOX_CMD|brief  |DESCRIPTION|<CURSOR>
  *  
  *  |DOX_CMD|param  <+NAME+> <+DESCRIPTION+>
  *  |DOX_CMD|return <+DESCRIPTION+>
- *  <+DETAILED+>
  */
 == Comments.class == map:ccl, shortcut:c  ==
-/*!
+/**
  *  |DOX_CMD|brief  |DESCRIPTION|<CURSOR>
- *  
- *  <+DETAILED+>
  */
 == ENDTEMPLATE ==
 
@@ -55,39 +51,25 @@
 == SEP: Comments.sep_file ==
 
 == Comments.file description impl == map:cfdi, shortcut:c, start, noindent ==
-/*!
- *    |DOX_CMD|file  |FILENAME|
- *   |DOX_CMD|brief  |DESCRIPTION|<CURSOR>
- *  
- *  <+DETAILED+>
- *  
- *  |DOX_CMD|author  |AUTHOR| (|AUTHORREF|), |EMAIL|
- *  
- *  |DOX_CMD|internal
- *       Created:  |DATE|
- *      Revision:  none
- *      Compiler:  gcc
- *  Organization:  |ORGANIZATION|
- *     Copyright:  |COPYRIGHT|
- *  
+/**
+ *   |DOX_CMD|file      |FILENAME|
+ *   |DOX_CMD|brief     |DESCRIPTION|<CURSOR>
+ *   |DOX_CMD|author    |AUTHOR| (|AUTHORREF|), |EMAIL|
+ *   |DOX_CMD|created   |DATE|
+ *   |DOX_CMD|revision  none
+ *   |DOX_CMD|compiler  gcc/g++
+ *   |DOX_CMD|copyright |COPYRIGHT|
  */
 
 == Comments.file description header == map:cfdh, shortcut:h, start, noindent ==
-/*!
- *    |DOX_CMD|file  |FILENAME|
- *   |DOX_CMD|brief  |DESCRIPTION|<CURSOR>
- *  
- *  <+DETAILED+>
- *  
- *  |DOX_CMD|author  |AUTHOR| (|AUTHORREF|), |EMAIL|
- *  
- *  |DOX_CMD|internal
- *       Created:  |DATE|
- *      Revision:  none
- *      Compiler:  gcc
- *  Organization:  |ORGANIZATION|
- *     Copyright:  |COPYRIGHT|
- *  
+/**
+ *   |DOX_CMD|file      |FILENAME|
+ *   |DOX_CMD|brief     |DESCRIPTION|<CURSOR>
+ *   |DOX_CMD|author    |AUTHOR| (|AUTHORREF|), |EMAIL|
+ *   |DOX_CMD|created   |DATE|
+ *   |DOX_CMD|revision  none
+ *   |DOX_CMD|compiler  gcc/g++
+ *   |DOX_CMD|copyright |COPYRIGHT|
  */
 
 == Comments.C file sections  == expandmenu, append, map:ccs, shortcut:s ==
@@ -318,17 +300,17 @@ SetProperty( 'Doxygen::BriefAM::Menu', 'Doxygen' )
 SetProperty( 'Doxygen::BriefAM::Map',  'dba' )
 
 == Doxygen.brief, after member == append, nomenu ==
-/*!< |DOX_CMD|brief <CURSOR> */
+/**< |DOX_CMD|brief <CURSOR> */
 == ENDTEMPLATE ==
 
 § basic blocks
 
 == Doxygen.frame == below, map:dfr, sc:f ==
-/*!
+/**
  *  |DOX_CMD|brief  <CURSOR>
  */
 == Doxygen.overload block == below, map:do, sc:o ==
-/*!
+/**
  *  |DOX_CMD|overload<CURSOR>
  */
 == ENDTEMPLATE ==
@@ -356,36 +338,35 @@ SetProperty( 'Doxygen::BriefAM::Map',  'dba' )
 § groups
 
 == Doxygen.defgroup block == below, map:dgd, sc:g ==
-/*!
+/**
  *  |DOX_CMD|defgroup |?DOXYGEN_GROUP|
  *  
  *  |DOX_CMD|brief    <CURSOR>
  *  
- *  <+DETAILED+>
  */
 == Doxygen.addtogroup blocks == below, noindent, map:dga, sc:g ==
-/*!
+/**
  *  |DOX_CMD|addtogroup <CURSOR>|?DOXYGEN_GROUP|
  *  |DOX_CMD|{
  */
 
 <SPLIT>
 
-/*!
+/**
  *  |DOX_CMD|}
  */
 == Doxygen.ingroup == below, map:dgi, sc:i ==
  *  |DOX_CMD|ingroup <CURSOR>|?DOXYGEN_GROUP|
  *  
 == Doxygen.member group blocks == below, noindent, map:dgm, sc:m ==
-/*!
+/**
  *  |DOX_CMD|name {+HEADER+}
  */
-/*! |DOX_CMD|{ */
+/** |DOX_CMD|{ */
 
 <SPLIT>
 
-/*! |DOX_CMD|} */
+/** |DOX_CMD|} */
 == ENDTEMPLATE ==
 
 == SEP: Doxygen.sep3 ==
@@ -412,7 +393,7 @@ SetProperty( 'Doxygen::BriefAM::Map',  'dba' )
 |PickList( 'Doxygen command', 'doxygen_page_cmd' )|
  *  |DOX_CMD||KEY|<CURSOR> |VALUE|
 == Doxygen.page block == below, map:dpb, sc:a ==
-/*!
+/**
  *  |DOX_CMD|page<CURSOR> {+REF+} {+TITLE+}
  */
 == ENDTEMPLATE ==
