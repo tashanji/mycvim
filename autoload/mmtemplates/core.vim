@@ -173,6 +173,8 @@ let s:StandardMacros = {
 			\ 'DATE'           : '%x',
 			\ 'FILENAME'       : '',
 			\ 'PATH'           : '',
+			\ 'UPATH'          : '',
+			\ 'UBASENAME'      : '',
 			\ 'SUFFIX'         : '',
 			\ 'TIME'           : '%X',
 			\ 'YEAR'           : '%Y',
@@ -2124,6 +2126,8 @@ function! s:PrepareStdTempl ( cmds, text )
 			"
 			let m_local.PICK     = file
 			let m_local.PATH     = fnamemodify ( file, ':h'   )
+			let m_local.UPATH    = fnamemodify ( file, ':h'   )
+			let m_local.UBASENAME= fnamemodify ( file, ':t:r' )
 			let m_local.FILENAME = fnamemodify ( file, ':t'   )
 			let m_local.BASENAME = fnamemodify ( file, ':t:r' )
 			let m_local.SUFFIX   = fnamemodify ( file, ':e'   )
@@ -2712,6 +2716,8 @@ function! mmtemplates#core#InsertTemplate ( library, t_name, ... ) range
 	let s:t_runtime.macros[ 'BASENAME' ] = expand( '%:t:r' )
 	let s:t_runtime.macros[ 'FILENAME' ] = expand( '%:t'   )
 	let s:t_runtime.macros[ 'PATH'     ] = expand( '%:p:h' )
+	let s:t_runtime.macros[ 'UPATH'    ] = toupper(expand( '%:p:h:t' ))
+	let s:t_runtime.macros[ 'UBASENAME'] = toupper(expand( '%:t:r' ))
 	let s:t_runtime.macros[ 'SUFFIX'   ] = expand( '%:e'   )
 	"
 	let s:t_runtime.macros[ 'DATE' ]     = strftime( s:library.macros[ 'DATE' ] )
@@ -3709,6 +3715,8 @@ function! mmtemplates#core#ExpandText ( library, text )
 	let m_local[ 'BASENAME' ] = expand( '%:t:r' )
 	let m_local[ 'FILENAME' ] = expand( '%:t'   )
 	let m_local[ 'PATH'     ] = expand( '%:p:h' )
+	let m_local[ 'UPATH'    ] = toupper(expand( '%:p:h:t' ))
+	let m_local[ 'UBASENAME'] = toupper(expand( '%:t:r' ))
 	let m_local[ 'SUFFIX'   ] = expand( '%:e'   )
 	"
 	let m_local[ 'DATE' ]     = strftime( t_lib.macros[ 'DATE' ] )
