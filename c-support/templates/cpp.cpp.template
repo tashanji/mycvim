@@ -153,12 +153,13 @@ ios::|PICK|<CURSOR>
 
 == C++.class == map:+c, shortcut:c ==
 /**
- * @brief   <CURSOR>
+ * @brief   |?CLASSNAME:c|    <CURSOR>
  **/
 class |CLASSNAME|
 {
 public:
-		|CLASSNAME| ();                             // constructor 
+    |CLASSNAME| ();                             // constructor 
+    ~|CLASSNAME| ();                            // destructor       
 
 protected:
 
