@@ -330,8 +330,7 @@ class |CLASSNAME|
 }  // -----  end of method |CLASSNAME|::operator =  (assignment operator)  ----- 
 
 == C++.IMPLEMENTATION.method == map:+im , shortcut:m ==
-void<CURSOR>
-|?CLASSNAME|::|?METHODNAME| ( <+argument_list+> )
+void |?CLASSNAME|::|?METHODNAME| ( <+argument_list+> )
 {
 	return ;
 }		// -----  end of method |CLASSNAME|::|?METHODNAME|  ----- 
@@ -341,8 +340,7 @@ void<CURSOR>
 //       Class:  |?CLASSNAME|
 //      Method:  get_|?ATTRIBUTE|
 //--------------------------------------------------------------------------------------
-inline |?RETURNTYPE|
-|CLASSNAME|::get_|ATTRIBUTE| (  ) const
+inline |?RETURNTYPE| |CLASSNAME|::get_|ATTRIBUTE| (  ) const
 {
 	return |ATTRIBUTE|;
 }		// -----  end of method |CLASSNAME|::get_|ATTRIBUTE|  ----- 

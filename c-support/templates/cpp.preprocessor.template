@@ -75,10 +75,10 @@
 #endif     // -----  not |CONDITION|  ----- 
 §-------------------------------------------------------------------------
 == Preprocessor.ifndef-def-endif == map:pind, shortcut:e ==
-#ifndef  |?BASENAME:L|_INC
-#define  |BASENAME|_INC
+#ifndef  _|UPATH|_|UBASENAME|_H_
+#define  _|UPATH|_|UBASENAME|_H_
 <CURSOR><SPLIT>
-#endif   // ----- #ifndef |BASENAME|_INC  ----- 
+#endif   // ----- #ifndef _|UPATH|_|UBASENAME|_H_  ----- 
 §-------------------------------------------------------------------------
 == Preprocessor.error == map:pe, shortcut:o ==
 #error	"<CURSOR>"			// 

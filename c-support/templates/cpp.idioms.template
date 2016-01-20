@@ -1,41 +1,42 @@
 == Idioms.function == map:if, shortcut:f  ==
-// ===  FUNCTION  ======================================================================
-//         Name:  |?FUNCTION_NAME|
-//  Description:  
-// =====================================================================================
-void<CURSOR>
-|FUNCTION_NAME| ( <+argument_list+> )
+/**
+ * @brief           <CURSOR> 
+ * @return           
+ **/
+void |?FUNCTION_NAME| ( <+argument_list+> )
 {
 <SPLIT>	return <+return_value+>;
 }		// -----  end of function |FUNCTION_NAME|  -----
 == Idioms.function-static == map:isf, shortcut:t  ==
-// ===  FUNCTION  ======================================================================
-//         Name:  |?FUNCTION_NAME|
-//  Description:  
-// =====================================================================================
-static void<CURSOR>
-|FUNCTION_NAME| ( <+argument_list+> )
+/**
+ * @brief           <CURSOR> 
+ * @return           
+ **/
+static void |?FUNCTION_NAME| ( <+argument_list+> )
 {
 <SPLIT>	return <+return_value+>;
 }		// -----  end of static function |FUNCTION_NAME|  -----
 == Idioms.main == map:im, shortcut:m  ==
 #include	<stdlib.h>
 
-// ===  FUNCTION  ======================================================================
-//         Name:  main
-//  Description:  
-// =====================================================================================
-int
-main ( int argc, char *argv[] )
+/**
+ * @brief           <CURSOR> 
+ * @return           
+ **/
+int main ( int argc, char *argv[] )
 {<CURSOR>
 <SPLIT>	return EXIT_SUCCESS;
 }				// ----------  end of function main  ----------
 == Idioms.enum == map:ie, shortcut:e  ==
-enum |?ENUM_NAME| {<CURSOR>
-<SPLIT>};				// ----------  end of enum |ENUM_NAME|  ----------
+enum |?ENUM_NAME|
+{<CURSOR>
+<SPLIT>
+};				// ----------  end of enum |ENUM_NAME|  ----------
 == Idioms.struct == map:is, shortcut:s  ==
-struct |?STRUCT_NAME| {<CURSOR>
-<SPLIT>};				// ----------  end of struct |STRUCT_NAME|  ----------
+struct |?STRUCT_NAME|
+{<CURSOR>
+<SPLIT>
+};				// ----------  end of struct |STRUCT_NAME|  ----------
 == Idioms.union == map:iu, shortcut:u  ==
 union |?UNION_NAME| {<CURSOR>
 <SPLIT>};				// ----------  end of union |UNION_NAME|  ----------
